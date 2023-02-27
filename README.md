@@ -32,3 +32,16 @@ Because of that the API do not return valid info.
 
 One more issue is maven build that failed with test on, the maven integration to junit 5 still need to be improve. never the less the tests are running on my IDE.
 
+### Next Phase
+The assumption for next phase is that the data values would be larger, and we may want to get additional information like history.
+We would like also to implement the On demand aggregation.
+
+Here we added kafka stream so we can split the ingestion into two phases retrieve date and consume it. 
+We also added direct request that take relativlly small amount of data, bypass kafka and perform synchronic ingest operation, wait till it ends and retrive aggregation data.<br>
+Other thing is that we change our storage to elasticsearch which is more flexible and can handle large volumes of data.
+
+
+<p align="center">
+  <img  width="640" height="380" src="home-assignment-next-phase.jpg">
+</p>
+<br/>
